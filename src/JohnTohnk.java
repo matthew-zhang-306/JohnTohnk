@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class JohnTohnk {
+public class JohnTohnk throws FileNotFoundException {
 
     public static void main(String args[]) {
         final int WORDCOUNT = 983;
@@ -9,13 +9,8 @@ public class JohnTohnk {
 
         Scanner[] scans = new Scanner[9];
 
-        for (int s = 0; s < scans.length; s++) {
-            try {
-                scans[s] = new Scanner(new File("thonk" + s));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
+        for (int s = 0; s < scans.length; s++)
+            scans[s] = new Scanner(new File("thonk" + s));
 
         String output = "";
 
